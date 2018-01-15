@@ -22,10 +22,11 @@ public class main {
 		for (Element link : doc.select("#mirror > li")) {
 		    String urlout = link.attr("data-url");
 		    String themeout = link.attr("data-theme");
-		    String output = urlout;
-		    //String output = themeout+":" + urlout;
+		    //String output = urlout;
+		    String output = themeout+":" + urlout;
 		    if(output.indexOf("youtube") <0 && output.indexOf("web.archive.org") <0){
-	            ar.add(output);
+		    	//output = output.substring(5);
+		    	ar.add(output);
 	        }
 		}   
 		System.out.println(ar);
