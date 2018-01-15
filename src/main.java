@@ -24,13 +24,13 @@ public class main {
 		    String themeout = link.attr("data-theme");
 		    String output = urlout;
 		    //String output = themeout+":" + urlout;
-		    if(output.indexOf("youtube") <0){
+		    if(output.indexOf("youtube") <0 && output.indexOf("web.archive.org") <0){
 	            ar.add(output);
 	        }
 		}   
 		System.out.println(ar);
 		if (Desktop.isDesktopSupported()) {
-		    Desktop.getDesktop().browse(new URI(ar.get(3)));
+		    Desktop.getDesktop().browse(new URI(ar.get(0)));
 		}
 		
 		
